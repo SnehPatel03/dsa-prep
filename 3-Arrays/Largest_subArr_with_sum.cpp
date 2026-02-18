@@ -23,7 +23,6 @@ int longestSubArrWithSumk(vector<int> a, int n, int k)
             int len = i - preMap[rem];
             maxLen = max(maxLen, len);
         }
-
         if (preMap.find(sum) == preMap.end())
         {
             preMap[sum] = i;
@@ -32,6 +31,31 @@ int longestSubArrWithSumk(vector<int> a, int n, int k)
     return maxLen;
 }
 
+int longestSubArrWithSumk2(vector<int> a, int n, int k)
+{
+    int maxLen = 0;
+    int sum = a[0];
+    int left = 0;
+    int right = 0;
+    while (right < n)
+    {
+        right++;
+        if (right < n)
+        {
+            sum += a[right];
+        }
+        while (sum > k && left <= right)
+        {
+            sum -= a[left];
+            left++;
+        }
+        if (sum == k)
+        {
+            maxLen = max(maxLen, right - left + 1);
+        }
+    }
+    return maxLen;
+}
 int main()
 {
     int n, k;
@@ -42,6 +66,9 @@ int main()
     {
         cin >> arr[i];
     }
-    int largestSubArrLen = longestSubArrWithSumk(arr, n, k);
+    // int largestSubArrLen = longestSubArrWithSumk(arr, n, k);
+    int largestSubArrLen = longestSubArrWithSumk2(arr, n, k);
     cout << largestSubArrLen;
 }
+//  Optimal solution when All zeros and negatives allowed in arr,
+//  for only positives  and zeros , this is better not optimal.
