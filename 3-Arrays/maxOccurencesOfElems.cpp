@@ -1,4 +1,6 @@
-// the elem having more than >n/2 occurences
+// the elem having more than >n/2 occurences in given array
+// moore's voting algorithem
+//this is the optimal solution for given problem
 #include <iostream>
 #include <algorithm>
 #include <vector>
