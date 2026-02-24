@@ -25,25 +25,19 @@ int MaxSumSubArr(vector<int> a, int n)
 // Optimal(kadane's Algo);
 int MaxSumSubArrByKadane(vector<int> a, int n)
 {
-    vector<int> ans;
     int sum = 0;
     int maxi = INT_MIN;
     for (int i = 0; i < n; i++)
     {
         sum += a[i];
-        if (sum < 0)
-        {
-            sum = 0;
-        }
         if (sum > maxi)
         {
             maxi = sum;
         }
-    }
-
-    if (maxi < 0)
-    {
-        return 0;
+        if (sum < 0)
+        {
+            sum = 0;
+        }
     }
     return maxi;
 }
@@ -89,13 +83,13 @@ int main()
         cin >> a[i];
     }
     // int sum = MaxSumSubArr(a, n);
-    // int sum = MaxSumSubArrByKadane(a, n);
-    // cout << sum;
+    int sum = MaxSumSubArrByKadane(a, n);
+    cout << sum;
 
     // But when we need a array that has those elems that results the sum then.. approach is slightly chnages
-    vector<int> subarr = MaxSumSubArrByKadane_resultsSubArr(a, n);
-    for (int i = 0; i < subarr.size(); i++)
-    {
-        cout << "index :"<<i << " is" <<" " <<  subarr[i] << endl;
-    }
+    // vector<int> subarr = MaxSumSubArrByKadane_resultsSubArr(a, n);
+    // for (int i = 0; i < subarr.size(); i++)
+    // {
+        // cout << "index :"<<i << " is" <<" " <<  subarr[i] << endl;
+    // }
 }

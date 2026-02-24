@@ -47,6 +47,7 @@ vector<int> reArrangeArrVarity2(vector<int> &a, int n)
             neg.push_back(a[i]);
         }
     }
+    
     if (pos.size() > neg.size())
     {
         for (int i = 0; i < neg.size(); i++)

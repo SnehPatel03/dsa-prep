@@ -28,7 +28,7 @@ int find_missing_no_XOR(vector<int> a, int n)
         xor1 = xor1 ^ a[i];
         xor2 = xor2 ^ (i + 1);
     }
-    xor2 = xor2 ^ n;
+    xor2 = xor2 ^ n;    
     int ans = xor1 ^ xor2;
     return ans;
 }
