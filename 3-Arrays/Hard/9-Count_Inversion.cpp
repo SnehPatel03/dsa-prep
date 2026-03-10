@@ -11,16 +11,16 @@ int ms(vector<int> &a, int low, int high, int mid)
     int right = mid + 1;
     while (left <= mid && right <= high)
     {
-        if (a[left] < a[right])
-        {
-            temp.push_back(a[left]);
-            left++;
-        }
-        else
+        if (a[left] > a[right])
         {
             cnt += (mid - left + 1);
             temp.push_back(a[right]);
             right++;
+        }
+        else
+        {
+            temp.push_back(a[left]);
+            left++;
         }
     }
     while (left <= mid)
