@@ -10,7 +10,7 @@ using namespace std;
 
 vector<vector<int>> threeSumBetter(int n, vector<int> a)
 {
-    // here 1st we are looking for O(n^2) solution there exist most naive solution in that all exist triplates are found by 3 loops and check if the sum is 0 or not that end up taking the O(n^3) that is very large and unacceptable So we are looking for better code ->
+    // here 1st we are looking for O(n^2) solution there also exist most naive solution in that all exist triplates are found by 3 loops and check if the sum is 0 or not that end up taking the O(n^3) that is very large and unacceptable So we are looking for better code ->
 
     set<vector<int>> triplates;
     for (int i = 0; i < n; i++)

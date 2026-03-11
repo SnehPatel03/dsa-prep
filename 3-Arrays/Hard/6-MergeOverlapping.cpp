@@ -1,4 +1,4 @@
-// merge the overlapping arrays of vector of 2.(startIndex,endIndex)
+// merge the overlapping arrays of vector of 2. (startIndex,endIndex)
 #include <iostream>
 #include <algorithm>
 #include <vector>

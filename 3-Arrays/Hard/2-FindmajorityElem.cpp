@@ -44,28 +44,29 @@ vector<int> maxOccurence(vector<int> a, int n)
     ans.push_back(elem2);
 
     // re checking block : 
-    // int cnt3 = 0;
-    // int cnt4 = 0;
-    // for (int i = 0; i < n; i++)
-    // {
-    //     if (a[i] == elem1)
-    //     {
-    //         cnt3++;
-    //     }
-    //     if (a[i] == elem2)
-    //     {
-    //         cnt4++;
-    //     }
-    // }
-    // if (cnt3 > n / 3 && cnt4 > n / 3)
-    // {
-    //     ans.push_back(elem1);
-    //     ans.push_back(elem2);
-    // }
-    // else
-    // {
-    //     ans.push_back(-1);
-    // }
+    
+    int cnt3 = 0;
+    int cnt4 = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i] == elem1)
+        {
+            cnt3++;
+        }
+        if (a[i] == elem2)
+        {
+            cnt4++;
+        }
+    }
+    if (cnt3 > n / 3 && cnt4 > n / 3)
+    {
+        ans.push_back(elem1);
+        ans.push_back(elem2);
+    }
+    else
+    {
+        ans.push_back(-1);
+    }
     return ans;
 }
 

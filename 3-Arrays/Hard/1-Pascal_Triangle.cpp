@@ -6,7 +6,7 @@ using namespace std;
 
 // Type 1 : where we need to return element on nth row and mth col on pascal triangle.
 // int pascaltri(int row, int col)
-// {   // rowCcol
+// {   // (row-1)C(col-1)
 //     row = row - 1;
 //     col = col - 1;
 //     // NcR of rows amd columns

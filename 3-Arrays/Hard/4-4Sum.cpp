@@ -8,7 +8,7 @@
 
 using namespace std;
 
-vector<vector<int>> threeSumBetter(int n, vector<int> a, int target)
+vector<vector<int>> fourSumBetter(int n, vector<int> a, int target)
 {
     // here 1st we are looking for O(n^3) solution there exist most naive solution in that all exist triplates are found by 4 loops and check if the sum is 0 or not that end up taking the O(n^4) that is very large and unacceptable So we are looking for better code ->
 
@@ -40,7 +40,7 @@ vector<vector<int>> threeSumBetter(int n, vector<int> a, int target)
 // SC: O(n^2)
 
 // Now we are looking for optimal solution :
-vector<vector<int>> threeSumOptimal(int n, vector<int> a, int target)
+vector<vector<int>> fourSumOptimal(int n, vector<int> a, int target)
 {
 
     vector<vector<int>> ans;
@@ -101,8 +101,8 @@ int main()
         cin >> a[i];
     }
 
-    // vector<vector<int>> ans = threeSumBetter(n, a, target);
-    vector<vector<int>> ans = threeSumOptimal(n, a,target);
+    // vector<vector<int>> ans = fourSumBetter(n, a, target);
+    vector<vector<int>> ans = fourSumOptimal(n, a,target);
     for (auto list : ans)
     {
         for (auto val : list)
