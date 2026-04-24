@@ -4,7 +4,7 @@
 #include <vector>
 #include <map>
 using namespace std;
-// given arr must be in sorted order :  
+// given arr must be in sorted order :
 void mergeArr(int n, int m, vector<int> a1, vector<int> a2)
 {
     int left = n - 1;
@@ -22,8 +22,8 @@ void mergeArr(int n, int m, vector<int> a1, vector<int> a2)
             break;
         }
     }
-    sort(a1.begin(), a1.end());
-    sort(a2.begin(), a2.end());
+        sort(a1.begin(), a1.end());
+        sort(a2.begin(), a2.end());
 
     for (int i = 0; i < n; i++)
     {
@@ -34,7 +34,7 @@ void mergeArr(int n, int m, vector<int> a1, vector<int> a2)
     {
         cout << a2[i] << " ";
     }
-}// tc is o(min(n,m)) +  nlogn + mlogm and sc is O(1)
+} // tc is o(min(n,m)) +  nlogn + mlogm and sc is O(1)
 
 void swapElems(vector<int> &a1, vector<int> &a2, int ind1, int ind2)
 {
@@ -47,7 +47,7 @@ void swapElems(vector<int> &a1, vector<int> &a2, int ind1, int ind2)
 void mergeArrByGapMethod(int n, int m, vector<int> &a1, vector<int> &a2)
 {
     int len = n + m;
-    int gap = (len / 2) + (len % 2);
+    int gap = (len / 2) + (len % 2); 
     while (gap > 0)
     {
         int left = 0;
@@ -107,7 +107,6 @@ int main()
     {
         cin >> a2[i];
     }
-
 
     // mergeArr(n, m, a1, a2);
     mergeArrByGapMethod(n, m, a1, a2);

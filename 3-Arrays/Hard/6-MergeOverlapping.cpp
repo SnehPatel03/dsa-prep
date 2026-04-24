@@ -39,7 +39,7 @@ vector<vector<int>> mergeOverlapsOptimal(vector<vector<int>> a, int n)
     sort(a.begin(), a.end());
     vector<vector<int>> ans;
     for (int i = 0; i < n; i++)
-    {
+    {   // (1,3) (2,4) (5,7) (6,8) (9,10)
         if (ans.empty() || a[i][0] > ans.back()[1])
         {
             ans.push_back(a[i]);

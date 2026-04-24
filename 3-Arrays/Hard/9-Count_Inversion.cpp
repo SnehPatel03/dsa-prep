@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-
+// find the count of inversion pairs in an array where a pair (a[i], a[j]) is called an inversion if i < j and a[i] > a[j]
 using namespace std;
 int ms(vector<int> &a, int low, int high, int mid)
 {

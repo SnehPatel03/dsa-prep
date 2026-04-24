@@ -3,23 +3,23 @@
 #include <vector>
 using namespace std;
 
-int maxProdct(vector<int> a, int n)
-{
-    int prefix = INT_MIN;
-    int sufix = INT_MIN;
-    int maxi = 0;
-    for (int i = 0; i < n; i++)
+    int maxProduct(vector<int> a, int n)
     {
-        if (prefix == 0)
-            prefix = 1;
-        if (sufix == 0)
-            sufix = 1;
-        prefix *= a[i];
-        sufix *= a[n - i - 1];
-        maxi = max(maxi, max(prefix, sufix));
+        int prefix = 1;
+        int sufix = 1;
+        int maxi = INT_MIN;
+        for (int i = 0; i < n; i++)
+        {
+            if (prefix == 0)
+                prefix = 1;
+            if (sufix == 0)
+                sufix = 1;
+            prefix *= a[i];
+            sufix *= a[n - i - 1];
+            maxi = max(maxi, max(prefix, sufix));
+        }
+        return maxi;
     }
-    return maxi;
-}
 int main()
 {
     int n;
@@ -29,6 +29,6 @@ int main()
     {
         cin >> a[i];
     }
-    int ans = maxProdct(a, n);
+    int ans = maxProduct(a, n);
     cout << ans;
 }
